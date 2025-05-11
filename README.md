@@ -13,7 +13,9 @@ A simple Chrome extension that helps you stay focused by tracking the time you s
 ## 📦 Installation
 
 1. Clone or download this repository:
+```bash
    git clone https://github.com/dadkhah-dev/youtube-focus-alert.git
+```
 
 2. Open Chrome and go to chrome://extensions
 3. Enable Developer mode (top right corner).
