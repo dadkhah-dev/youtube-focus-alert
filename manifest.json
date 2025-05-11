@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Focus Alert",
+  "version": "1.0",
+  "description": "Stay focused! Get alerted when spending too much time on YouTube.",
+  "permissions": ["storage", "tabs", "alarms", "scripting", "notifications"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["*://www.youtube.com/*"],
+    "js": ["content.js"]
+  }],
+  "icons": {
+    "128": "icons/icon128.png"
+  }
+}

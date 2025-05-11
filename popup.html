@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>YouTube Focus Alert</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Focus Settings</h1>
+  <label for="minutes">Max minutes on YouTube:</label>
+  <input type="number" id="minutes" min="1" max="120">
+  <button id="save">Save</button>
+  <p id="message" style="color: green; display: none; margin-top: 10px;">Saved successfully!</p>
+  <p><strong>Time spent today:</strong> <span id="timeSpent">0 Minutes</span></p>
+  <script src="popup.js"></script>
+</body>
+</html>
