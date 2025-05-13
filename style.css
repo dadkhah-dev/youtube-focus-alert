@@ -40,10 +40,15 @@ button {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  margin-bottom: 4px;
 }
 
 button:hover {
   background-color: #0056b3;
+}
+
+#reset{
+  background-color: #ff4d00;
 }
 
 #message {

@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("minutes");
   const button = document.getElementById("save");
+  const reset = document.getElementById("reset");
   const message = document.getElementById("message");
 
   chrome.storage.sync.get("maxMinutes", ({ maxMinutes }) => {
@@ -11,11 +12,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const newValue = parseInt(input.value, 10);
     chrome.storage.sync.set({ maxMinutes: newValue }, () => {
       // Show success message
+      message.innerHTML = 'Saved successfully!';
       message.style.display = "block";
       setTimeout(() => {
         message.style.display = "none";
-      }, 2000); // hide after 2 seconds
+      }, 2000);  
     });
+  });
+
+  reset.addEventListener("click", () => {
+    chrome.storage.sync.set({ timeSpent: 0 });
+    message.innerHTML = 'Resetting time to Zero.';
+      message.style.display = "block";
+      setTimeout(() => {
+        message.style.display = "none";
+      }, 2000);  
   });
 
   function formatTime(seconds) {
